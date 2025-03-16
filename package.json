@@ -1,0 +1,29 @@
+{
+  "name": "mcp-github",
+  "version": "1.0.0",
+  "description": "MCP server for GitHub API integration using Smithery",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/*.js",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "prepare": "npm run build",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.0.1",
+    "@types/node": "^20.11.5",
+    "node-fetch": "^3.3.2",
+    "zod": "^3.22.4",
+    "zod-to-json-schema": "^3.23.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "shx": "^0.3.4",
+    "typescript": "^5.3.3"
+  }
+}
